@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import cookieParser from "cookie-parser";
 import tasksRoutes from "./routes/tasks.routes.js";
 import authRoutes from "./routes/auth.routes.js";
 
@@ -7,6 +8,7 @@ const app = express();
 
 // Settings
 app.use(morgan("dev")); // morgan is a middleware
+app.use(cookieParser()); // cookieParser is a middleware
 app.use(express.json()); // express.json() is a middleware
 app.use(express.urlencoded({extended: false})); // express.urlencoded() is a middleware
 
