@@ -16,10 +16,11 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        
+
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/tasks" element={<TasksPage />} />
         <Route path="/tasks/new" element={<TaskFormPage />} />
+        <Route path="/tasks/:id" element={<TaskFormPage />} />
         <Route path="*" element={<NotFoundPage />} />
 
       </Routes>

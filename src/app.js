@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import cors from 'cors';
 import cookieParser from "cookie-parser";
 import tasksRoutes from "./routes/tasks.routes.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -7,6 +8,10 @@ import authRoutes from "./routes/auth.routes.js";
 const app = express();
 
 // Settings
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}))
 app.use(morgan("dev")); // morgan is a middleware
 app.use(cookieParser()); // cookieParser is a middleware
 app.use(express.json()); // express.json() is a middleware
