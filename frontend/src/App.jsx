@@ -10,7 +10,6 @@ import TaskFormPage from './pages/TaskFormPage'
 
 function App() {
   return (
-    <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -22,9 +21,7 @@ function App() {
         <Route path="/tasks/new" element={<TaskFormPage />} />
         <Route path="/tasks/:id" element={<TaskFormPage />} />
         <Route path="*" element={<NotFoundPage />} />
-
       </Routes>
-    </div>
   )
 }
 

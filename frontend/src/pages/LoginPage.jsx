@@ -1,23 +1,32 @@
 import { Button, Card, Input, Label } from "../components/ui";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import axios from "axios";
+import { useAuth } from "../context/AuthContext";
 
 function LoginPage() {
   const { register, handleSubmit } = useForm();
+  const { signin, errors } = useAuth();
+  const navigate = useNavigate();
 
   const onSubmit = handleSubmit(async (data) => {
-    console.log(data);
+    const user = await signin(data);
+    if (user) {
+      navigate("/profile");
+    }
 
-    const res = await axios.post("http://localhost:4000/api/signin", data, {
-      withCredentials: true,
-    });
-    console.log(res);
   });
 
   return (
     <div className="h-[calc(100vh-64px)] flex justify-center items-center">
       <Card>
+
+        {
+          errors && errors.map((error,index) => (
+            <p className="text-red-500 text-center"
+            key={index}>{error}</p>
+          ))
+        }
+
         <h3 className="text-3xl font-semibold my-4">Login</h3>
 
         <form onSubmit={onSubmit}>
