@@ -13,7 +13,7 @@ export const createTaskSchema = z.object({
       required_error: "Description is required",
       invalid_type_error: "Description must be a string",
     })
-    .min(1)
+    .min(0)
     .max(255)
     .optional(),
 });
@@ -32,7 +32,7 @@ export const updateTaskSchema = z.object({
       required_error: "Description is required",
       invalid_type_error: "Description must be a string",
     })
-    .min(1)
+    .min(0)
     .max(255)
     .optional(),
 });

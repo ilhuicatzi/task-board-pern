@@ -4,14 +4,14 @@ import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 
 function LoginPage() {
-  const { register, handleSubmit } = useForm();
-  const { signin, errors } = useAuth();
+  const { register, handleSubmit, formState: {errors} } = useForm();
+  const { signin, errors:errorsPost } = useAuth();
   const navigate = useNavigate();
 
   const onSubmit = handleSubmit(async (data) => {
     const user = await signin(data);
     if (user) {
-      navigate("/profile");
+      navigate("/tasks");
     }
 
   });
@@ -21,7 +21,7 @@ function LoginPage() {
       <Card>
 
         {
-          errors && errors.map((error,index) => (
+          errorsPost && errorsPost.map((error,index) => (
             <p className="text-red-500 text-center"
             key={index}>{error}</p>
           ))
@@ -38,6 +38,7 @@ function LoginPage() {
               required: true,
             })}
           />
+          {errors.email && <p className="text-red-500"> Email is required </p>}
 
           <Label htmlFor="password">Password</Label>
           <Input
@@ -47,6 +48,9 @@ function LoginPage() {
               required: true,
             })}
           />
+          {errors.password && (
+            <p className="text-red-500"> Password is required </p>
+          )}
 
           <Button>Login</Button>
         </form>
@@ -56,7 +60,7 @@ function LoginPage() {
             Don't have an account?{" "}
             <Link
               to="/register"
-              className="text-indigo-500 hover:underline hover:text-indigo-400 font-semibold"
+              className="ml-1 text-sky-500 hover:underline hover:text-indigo-400 font-semibold"
             >
               Register
             </Link>

@@ -51,6 +51,14 @@ export function AuthProvider({ children }) {
     }
   };
 
+  const signout = async () => {
+    const res = await axios.post("/signout");
+    console.log(res.data);
+    setUser(null);
+    setIsAuthenticated(false);
+  };
+
+
   const formatDate = (date) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(date).toLocaleDateString(undefined, options);
@@ -75,6 +83,15 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
+  useEffect(() => {
+  const clean=setTimeout(() => {
+        setErrors(null);
+      }, 5000);
+    return () => { 
+      clearTimeout(clean);
+    }
+  }, [errors]);
+
   return (
     <AuthContext.Provider
       value={{
@@ -83,6 +100,7 @@ export function AuthProvider({ children }) {
         errors,
         signup,
         signin,
+        signout,
         formatDate,
       }}
     >
