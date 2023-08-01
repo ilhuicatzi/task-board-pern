@@ -1,4 +1,4 @@
-### PERN TASKS
+# (TaskBoard) pern-taskboard
 
 This is a simple task manager app built with the PERN stack (PostgreSQL, Express, React, Node.js).
 
@@ -22,4 +22,4 @@ This is a simple task manager app built with the PERN stack (PostgreSQL, Express
 - React Icons
 - Vite
 
-# author: g.ilhuicatzi@gmai.com
+## author: g.ilhuicatzi@gmai.com
