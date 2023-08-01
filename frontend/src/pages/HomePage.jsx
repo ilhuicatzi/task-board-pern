@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { BiLogoPlayStore } from "react-icons/bi";
+import Style from "../styles/HomePage.module.css";
 
 function HomePage() {
   return (
-    <div>
+    <div className={Style.mainBox}>
       <aside className="relative overflow-hidden text-white rounded-lg sm:mx-16 mx-2 sm:py-16">
         <div className="relative z-10 max-w-screen-xl px-4 pb-10 pt-10 sm:py-20 mx-auto sm:px-6 lg:px-8">
           <div className="flex flex-col items-end max-w-xl sm:mt-48 mt-56 lg:mt-1  space-y-8 text-center sm:text-right sm:ml-auto">
@@ -34,7 +35,7 @@ function HomePage() {
         </div>
 
         <div className="flex justify-center items-center">
-          <p className="hidden md:block text-lg w-3/4 text-center">
+          <p className="hidden md:block text-lg w-3/4 text-justify">
             TaskBoard es una innovadora aplicación web Full-Stack creada con el
             poderoso conjunto de tecnologías PERN: PostgreSQL, Express, React y
             Node. Su objetivo principal es ofrecer a los usuarios una plataforma

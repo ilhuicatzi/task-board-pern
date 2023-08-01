@@ -22,7 +22,7 @@ function Navbar() {
               <li key={index}>
                 <Link
                   className={twMerge(
-                    "flex items-center border-2 px-3 py-0.5 rounded-lg border-transparent hover:text-stone-300",
+                    "flex items-center border-2 px-3 py-0.5 rounded-lg border-transparent hover:text-stone-300 text-white",
                     location.pathname === item.path && "bg-sky-600"
                   )}
                   to={item?.path}
@@ -54,7 +54,7 @@ function Navbar() {
             <li
               key={index}
               className={twMerge(
-                "flex items-center border-2 px-2 py-0.5 rounded-lg border-transparent hover:text-stone-300",
+                "flex items-center border-2 px-2 py-0.5 rounded-lg border-transparent hover:text-stone-300 text-white",
                 location.pathname === item.path && "bg-sky-600"
               )}
             >

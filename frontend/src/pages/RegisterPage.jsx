@@ -18,7 +18,7 @@ function RegisterPage() {
   })
 
   return (
-    <div className="h-[calc(100vh-70px)] flex justify-center items-center">
+    <div className="h-[calc(100vh-70px)] flex justify-center items-center w-[calc(100vw-72px)]">
       <Card>
         {
           signupErrors && signupErrors.map((error,index) => (

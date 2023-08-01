@@ -17,7 +17,7 @@ function LoginPage() {
   });
 
   return (
-    <div className="h-[calc(100vh-100px)] flex justify-center items-center">
+    <div className="h-[calc(100vh-100px)] flex justify-center items-center w-[calc(100vw-72px)]">
       <Card>
 
         {

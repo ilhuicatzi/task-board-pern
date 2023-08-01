@@ -35,6 +35,7 @@ export const getTask = async (req, res) => {
 export const updateTask = async (req, res) => {
     const id = req.params.id;
     const { title, description } = req.body;
+    console.log(id, title, description)
 
     const result = await pool.query(
         'UPDATE task SET title = $1, description = $2 WHERE id = $3 RETURNING *',
