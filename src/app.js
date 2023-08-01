@@ -26,7 +26,7 @@ app.get("/", (req, res) =>
   res.json({ message: "Welcome to my application tasks" })
 );
 
-app.get("/aoi/ping", async (req, res) => {
+app.get("/api/ping", async (req, res) => {
   console.log("Received a ping request");
   await pool.query("SELECT NOW()", (err, result) => {
     if (err) {

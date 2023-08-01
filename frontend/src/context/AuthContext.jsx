@@ -20,7 +20,7 @@ export function AuthProvider({ children }) {
   const signup = async (data) => {
     try {
       const res = await axios.post("/signup", data);
-      console.log(res.data.user);
+      //console.log(res.data.user);
       setUser(res.data.user);
       setIsAuthenticated(true);
 
@@ -53,7 +53,7 @@ export function AuthProvider({ children }) {
 
   const signout = async () => {
     const res = await axios.post("/signout");
-    console.log(res.data);
+    //console.log(res.data);
     setUser(null);
     setIsAuthenticated(false);
   };
@@ -79,7 +79,7 @@ export function AuthProvider({ children }) {
         });
     }
     else {
-      console.log("No token found");
+      //console.log("No token found");
     }
   }, []);
 
