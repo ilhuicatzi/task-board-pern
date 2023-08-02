@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false })); // express.urlencoded() is a m
 
 // Routes
 app.get("/", (req, res) =>
-  res.json({ message: "Welcome to my application tasks" })
+  res.json({ message: "Welcome to my application TaskBoard" })
 );
 
 app.get("/api/ping", async (req, res) => {
@@ -40,6 +40,10 @@ app.get("/api/ping", async (req, res) => {
 
 app.use("/api", tasksRoutes);
 app.use("/api", authRoutes);
+
+app.use('*', (req, res) => {
+  res.redirect('/');
+});
 
 app.use((err, req, res, next) => {
   res.status(500).json({

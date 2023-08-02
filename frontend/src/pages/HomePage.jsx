@@ -10,7 +10,7 @@ function HomePage() {
           <div className="flex flex-col items-end max-w-xl sm:mt-48 mt-56 lg:mt-1  space-y-8 text-center sm:text-right sm:ml-auto">
             <h2 className="text-4xl font-bold sm:text-6xl flex flex-col justify-end items-end">
               <div>
-                <span className="text-sky-500">Task</span>
+                <span className="text-sky-900">Task</span>
                 <span className="hidden min-[320px]:inline-block text-stone-300">
                   Board
                 </span>

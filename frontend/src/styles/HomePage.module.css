@@ -1,8 +1,9 @@
 .mainBox {
-    background-color: rgb(46, 83, 151);
+    background-color: rgb(34, 135, 202);
     position: absolute;
     top: 64px;
     left: 0;
     right: 0;
     bottom: -20;
+    height: 100vh;
   }

@@ -12,7 +12,7 @@ function AboutPage() {
         </h1>
 
         <div className="text-xs sm:text-base">
-          <p className="font-mono text-zinc-800 text-justify mb-4">
+          <p className="font-mono text-zinc-100 text-justify mb-4">
             TaskBoard es una completa aplicación web de gestión de tareas
             diseñada con tecnologías Full-Stack PERN (Postgres, Express, React,
             y Node). Su principal objetivo es proporcionar a los usuarios una
@@ -22,21 +22,21 @@ function AboutPage() {
             que garantiza la privacidad de sus datos.
           </p>
 
-          <p className=" font-mono text-zinc-800 text-justify mb-4">
+          <p className=" font-mono text-zinc-100 text-justify mb-4">
             La aplicación destaca por su interfaz de usuario intuitiva y
             moderna, desarrollada con React y estilizada con Tailwind CSS.
             Además, TaskBoard se integra con una base de datos PostgreSQL,
             asegurando un acceso rápido y fiable a la información almacenada.
           </p>
 
-          <p className=" font-mono text-zinc-800 text-justify mb-4">
+          <p className=" font-mono text-zinc-100 text-justify mb-4">
             TaskBoard se posiciona como una solución todo-en-uno para la gestión
             de tareas, ofreciendo una experiencia de usuario fluida y una
             plataforma segura para mejorar la productividad y mantener el
             enfoque en los objetivos diarios.
           </p>
 
-          <p className="font-mono text-zinc-800 text-justify mb-4">
+          <p className="font-mono text-zinc-100 text-justify mb-4">
             ¡Regístrate en TaskBoard hoy mismo y descubre una nueva forma de
             organizarte y avanzar hacia tus metas!
           </p>

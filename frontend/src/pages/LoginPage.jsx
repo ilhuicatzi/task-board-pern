@@ -17,7 +17,7 @@ function LoginPage() {
   });
 
   return (
-    <div className="h-[calc(100vh-100px)] flex justify-center items-center w-[calc(100vw-72px)]">
+    <div className="h-[calc(80vh)] flex justify-center items-center w-[calc(100vw-72px)]">
       <Card>
 
         {
@@ -52,7 +52,7 @@ function LoginPage() {
             <p className="text-red-500"> Password is required </p>
           )}
 
-          <Button>Login</Button>
+          <Button className="px-3 py-2 rounded-xl bg-sky-700 hover:bg-sky-500" >Login</Button>
         </form>
 
         <div className="flex items-center my-4">

@@ -18,7 +18,7 @@ function RegisterPage() {
   })
 
   return (
-    <div className="h-[calc(100vh-70px)] flex justify-center items-center w-[calc(100vw-72px)]">
+    <div className="h-[calc(90vh)] flex justify-center items-center w-[calc(100vw-72px)]">
       <Card>
         {
           signupErrors && signupErrors.map((error,index) => (
@@ -59,7 +59,7 @@ function RegisterPage() {
             errors.password && <p className="text-red-500">Password is required</p>
           }
 
-          <Button>Register</Button>
+          <Button className="px-3 py-2 rounded-xl bg-sky-700 hover:bg-sky-500 mb-4" >Register</Button>
         </form>
 
         <div>

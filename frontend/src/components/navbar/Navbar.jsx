@@ -34,7 +34,7 @@ function Navbar() {
             ))}
 
             <li
-              className="p-1.5 bg-slate-800 hover:bg-red-950 rounded-lg text-xl font-medium"
+              className="py-1.5 px-3 bg-slate-800 hover:bg-red-950 rounded-lg text-xl font-medium"
               onClick={() => {
                 if(window.confirm("Do you want to sign out?")) {
                   signout()
